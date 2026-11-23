@@ -1,0 +1,260 @@
+{
+  "title": "Gestione priorità degli interventi",
+  "description": "Prototipo per ricevere, classificare e monitorare le richieste di manutenzione di istituti scolastici di fantasia, con una coda filtrabile e schede operative.",
+  "accent": "indigo",
+  "pages": [
+    {
+      "id": "cruscotto",
+      "title": "Cruscotto",
+      "description": "Panoramica delle richieste e delle priorità da prendere in carico.",
+      "metrics": [
+        {
+          "label": "Richieste aperte",
+          "value": "18"
+        },
+        {
+          "label": "Priorità urgente",
+          "value": "3"
+        },
+        {
+          "label": "Priorità alta",
+          "value": "6"
+        },
+        {
+          "label": "In attesa di valutazione",
+          "value": "4"
+        }
+      ],
+      "columns": [
+        "Codice richiesta",
+        "Istituto",
+        "Problema",
+        "Priorità",
+        "Stato",
+        "Data segnalazione"
+      ],
+      "rows": [
+        [
+          "INT-2401",
+          "Liceo Lumo delle Valli",
+          "Perdita d'acqua in corridoio",
+          "Urgente",
+          "Da assegnare",
+          "12/05/2025"
+        ],
+        [
+          "INT-2402",
+          "Istituto Vela del Delta",
+          "Guasto al quadro luci",
+          "Alta",
+          "In valutazione",
+          "12/05/2025"
+        ],
+        [
+          "INT-2403",
+          "Liceo Nubi di Bruma",
+          "Infissi bloccati in aula",
+          "Media",
+          "Pianificata",
+          "11/05/2025"
+        ],
+        [
+          "INT-2404",
+          "Istituto Mirto delle Acque",
+          "Distacco di intonaco in atrio",
+          "Alta",
+          "Da assegnare",
+          "10/05/2025"
+        ]
+      ],
+      "form": []
+    },
+    {
+      "id": "richieste",
+      "title": "Richieste",
+      "description": "Elenco filtrabile delle segnalazioni; usare priorità e stato per individuare gli interventi da gestire per primi.",
+      "metrics": [],
+      "columns": [
+        "Codice richiesta",
+        "Istituto",
+        "Problema",
+        "Area",
+        "Priorità",
+        "Stato",
+        "Data segnalazione"
+      ],
+      "rows": [
+        [
+          "INT-2401",
+          "Liceo Lumo delle Valli",
+          "Perdita d'acqua in corridoio",
+          "Impianti idrici",
+          "Urgente",
+          "Da assegnare",
+          "12/05/2025"
+        ],
+        [
+          "INT-2402",
+          "Istituto Vela del Delta",
+          "Guasto al quadro luci",
+          "Impianti elettrici",
+          "Alta",
+          "In valutazione",
+          "12/05/2025"
+        ],
+        [
+          "INT-2403",
+          "Liceo Nubi di Bruma",
+          "Infissi bloccati in aula",
+          "Serramenti",
+          "Media",
+          "Pianificata",
+          "11/05/2025"
+        ],
+        [
+          "INT-2404",
+          "Istituto Mirto delle Acque",
+          "Distacco di intonaco in atrio",
+          "Opere murarie",
+          "Alta",
+          "Da assegnare",
+          "10/05/2025"
+        ],
+        [
+          "INT-2405",
+          "Liceo Selva dei Riflessi",
+          "Riscaldamento non uniforme",
+          "Climatizzazione",
+          "Media",
+          "In valutazione",
+          "09/05/2025"
+        ],
+        [
+          "INT-2406",
+          "Istituto Quarzo di Foschia",
+          "Porta antincendio difficile da chiudere",
+          "Sicurezza",
+          "Urgente",
+          "In verifica",
+          "09/05/2025"
+        ],
+        [
+          "INT-2407",
+          "Liceo Brina delle Sorgenti",
+          "Rubinetto danneggiato",
+          "Impianti idrici",
+          "Bassa",
+          "Pianificata",
+          "08/05/2025"
+        ],
+        [
+          "INT-2408",
+          "Istituto Glicine del Ponente",
+          "Pavimentazione sconnessa in laboratorio",
+          "Pavimenti",
+          "Alta",
+          "Da assegnare",
+          "07/05/2025"
+        ]
+      ],
+      "form": []
+    },
+    {
+      "id": "nuova-richiesta",
+      "title": "Nuova richiesta",
+      "description": "Registra una segnalazione con gli elementi necessari per valutarne la priorità.",
+      "metrics": [],
+      "columns": [
+        "Istituto",
+        "Problema",
+        "Area",
+        "Impatto sulle attività",
+        "Rischio per le persone",
+        "Urgenza richiesta",
+        "Data segnalazione"
+      ],
+      "rows": [],
+      "form": [
+        "Istituto",
+        "Problema",
+        "Area",
+        "Impatto sulle attività",
+        "Rischio per le persone",
+        "Urgenza richiesta",
+        "Data segnalazione"
+      ]
+    },
+    {
+      "id": "valutazione-priorita",
+      "title": "Valutazione priorità",
+      "description": "Valuta rischio, impatto e urgenza per assegnare una priorità motivata e aggiornare lo stato della richiesta.",
+      "metrics": [],
+      "columns": [
+        "Codice richiesta",
+        "Istituto",
+        "Problema",
+        "Rischio",
+        "Impatto",
+        "Urgenza",
+        "Priorità assegnata",
+        "Stato"
+      ],
+      "rows": [
+        [
+          "INT-2401",
+          "Liceo Lumo delle Valli",
+          "Perdita d'acqua in corridoio",
+          "Possibile scivolamento",
+          "Area di passaggio parzialmente interdetta",
+          "Intervento immediato",
+          "Urgente",
+          "Da assegnare"
+        ],
+        [
+          "INT-2402",
+          "Istituto Vela del Delta",
+          "Guasto al quadro luci",
+          "Disservizio elettrico localizzato",
+          "Attività didattica ridotta",
+          "Entro pochi giorni",
+          "Alta",
+          "In valutazione"
+        ],
+        [
+          "INT-2404",
+          "Istituto Mirto delle Acque",
+          "Distacco di intonaco in atrio",
+          "Possibile caduta di materiale",
+          "Accesso da delimitare",
+          "Entro pochi giorni",
+          "Alta",
+          "Da assegnare"
+        ],
+        [
+          "INT-2406",
+          "Istituto Quarzo di Foschia",
+          "Porta antincendio difficile da chiudere",
+          "Funzione di sicurezza compromessa",
+          "Percorso da verificare",
+          "Intervento immediato",
+          "Urgente",
+          "In verifica"
+        ]
+      ],
+      "form": [
+        "Codice richiesta",
+        "Istituto",
+        "Problema",
+        "Rischio",
+        "Impatto",
+        "Urgenza",
+        "Priorità assegnata",
+        "Stato"
+      ]
+    }
+  ],
+  "theme": {
+    "palette": "terracotta",
+    "fonts": "classico"
+  }
+}
